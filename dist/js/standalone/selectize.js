@@ -1201,6 +1201,7 @@
 		// option-dependent defaults
 		self.settings.mode = self.settings.mode || (self.settings.maxItems === 1 ? 'single' : 'multi');
 		self.settings.dropdownDirection = self.settings.dropdownDirection || 'auto';
+		self.settings.dropdownWidth = self.settings.dropdownWidth || 'parent';
 		if (typeof self.settings.hideSelected !== 'boolean') {
 			self.settings.hideSelected = self.settings.mode === 'multi';
 		}
@@ -1277,7 +1278,9 @@
 			}
 	
 			$wrapper.css({
-				width: $input[0].style.width
+				width: $input[0].style.width,
+				'min-width': $input[0].style['min-width'],
+				'max-width': $input[0].style['max-width']
 			});
 	
 			if (self.plugins.names.length) {
@@ -2955,7 +2958,7 @@
 			offset.top += $control.outerHeight(true);
 	
 			this.$dropdown.css({
-				width : $control[0].getBoundingClientRect().width,
+				width : (this.settings.dropdownWidth === 'parent') ? $control[0].getBoundingClientRect().width : this.settings.dropdownWidth,
 				left  : offset.left,
 				top   : (direction === 'down') ?  offset.top : 'auto',
 				bottom: (direction === 'down') ? 'auto'  : offset.top,
