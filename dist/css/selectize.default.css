@@ -287,6 +287,10 @@
 .selectize-dropdown .create {
   color: rgba(48, 48, 48, 0.5);
 }
+.selectize-dropdown.dropdown-up {
+  border: 1px solid #d0d0d0;
+  border-bottom: 0 none;
+}
 .selectize-dropdown-content {
   overflow-y: auto;
   overflow-x: hidden;
