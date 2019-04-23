@@ -178,6 +178,12 @@ $(function() {
 		<td valign="top"><code>'auto'</code></td>
 	</tr>
 	<tr>
+		<td valign="top"><code>dropdownWidth</code></td>
+		<td valign="top">The width of the opened dropdown. Can be set to 'parent' or any valid css width setting, eg. '15em'.</td>
+		<td valign="top"><code>string</code></td>
+		<td valign="top"><code>'parent'</code></td>
+	</tr>
+	<tr>
 		<td valign="top"><code>dropdownParent</code></td>
 		<td valign="top">The element the dropdown menu is appended to. This should be <code>'body'</code> or <code>null</code>. If null, the dropdown will be appended as a child of the Selectize control.</td>
 		<td valign="top"><code>string</code></td>
